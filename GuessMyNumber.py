@@ -2,7 +2,7 @@ x = 100
 epsilon = 1
 low = 0
 high = x
-ans = (high + low)//2
+ans = (high + low) // 2
 
 print('Please think of a number between 0 and 100!')
 
