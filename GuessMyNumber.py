@@ -21,5 +21,3 @@ while abs(ans**2 - x) >= epsilon:
     else:
         print('Sorry, I did not understand your input.')
 print('Game over. Your secret number was: ' + str(ans))
-
-
