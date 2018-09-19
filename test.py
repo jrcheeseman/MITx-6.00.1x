@@ -88,7 +88,9 @@ isIn('j', 'gjnpsuxy')
 isIn('o', 'a')
 isIn('a', 'ab')
 
-
+balance             = 10970.28
+annualInterestRate  = 16.40
+monthlyPaymentRate  = 2
 
 
 
