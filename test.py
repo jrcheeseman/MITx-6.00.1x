@@ -1,110 +1,75 @@
-def iterPower(base, exp):
+
+x = (1, 2, (3, 'John', 4), 'Hi')
+
+aTup = ('I', 'am', 'a', 'test', 'Tup')
+
+def oddTups (aTup):
+    aNewTup = aTup[0::2]
+    return aNewTup
+oddTups(aTup)
+
+x = [1, 2, [3, 'John', 4], 'Hi']
+
+listA = [1, 4, 3, 0]
+listB = ['x', 'z', 't', 'q']
+
+[100, 0, 1, 4, 7, 4, 1, 6, 3, 4]
+
+
+alist = [100, 0, 1, 4, 4, 1, 6, 3, 4]
+blist = alist
+
+
+
+testList = [1, -4, 8, -9]
+
+def applyToEach(L, f):
+    for i in range(len(L)):
+        L[i] = f(L[i])
+
+def absSqr(a):
+    return abs(a) ** 2
+
+applyToEach(testList, absSqr)
+
+print(testList)
+
+
+animals = { 'a': ['aardvark'], 'b': ['baboon'], 'c': ['coati']}
+
+animals['d'] = ['donkey']
+animals['d'].append('dog')
+animals['d'].append('dingo')
+
+def how_many(aDict):
     '''
-    base: int or float.
-    exp: int >= 0
+    aDict: A dictionary, where all the values are lists.
 
-    returns: int or float, base^exp
+    returns: int, how many values are in the dictionary.
     '''
-    result = 1
-    exp -= 1
-    while exp >= 0:
-        result *= base
-        exp -= 1
-    return result
+    count = 0
+    for i in aDict:
+        count += len(aDict[i])
+    return count
 
-iterPower(2, 3)
+how_many(animals)
 
 
-def recurPower(base, exp):
+nothing = {}
+
+def biggest(aDict):
     '''
-    base: int or float.
-    exp: int >= 0
+    aDict: A dictionary, where all the values are lists.
 
-    returns: int or float, base^exp
+    returns: int, how many values are in the dictionary.
     '''
-    if exp == 1:
-        return base
-    elif exp == 0:
-        return 1
-    elif exp >= 0:
-        return base * recurPower(base, exp-1)
+    for i in aDict:
+        if aDict[i] == max(aDict.values()):
+            return i
+        elif aDict == {}:
+            return None
 
-recurPower(2, 3)
-
-
-def gcdIter(a, b):
-    '''
-    a, b: positive integers
-
-    returns: a positive integer, the greatest common divisor of a & b.
-    '''
-    test = a
-    while test > 0:
-        if ((a % test) == 0) and ((b % test) == 0):
-            return test
-            break
-        else:
-            test -= 1
-
-gcdIter(17, 12)
-
-
-def gcdRecur(a, b):
-    '''
-    a, b: positive integers
-
-    returns: a positive integer, the greatest common divisor of a & b.
-    '''
-    # Your code here
-    if b == 0:
-        return a
-    else:
-        return gcdRecur(b, a % b)
-
-gcdRecur(17, 12)
-
-
-def isIn(char, aStr):
-    '''
-    char: a single character
-    aStr: an alphabetized string
-
-    returns: True if char is in aStr; False otherwise
-    '''
-    if aStr == '':
-        return False
-    elif char == aStr[len(aStr)//2]:
-        return True
-    elif char < aStr[len(aStr)//2] and len(aStr) > 1:
-        return isIn(char, aStr[:len(aStr)//2])
-    elif char > aStr[len(aStr)//2] and len(aStr) > 1:
-        return isIn(char, aStr[len(aStr)//2:])
-    else:
-        return False
-
-isIn('f', 'bfhknopxxyyz')
-isIn('a', 'abcdefg')
-isIn('j', 'gjnpsuxy')
-isIn('o', 'a')
-isIn('a', 'ab')
-
-balance             = 10970.28
-annualInterestRate  = 16.40
-monthlyPaymentRate  = 2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+biggest(nothing)
 
 
 
