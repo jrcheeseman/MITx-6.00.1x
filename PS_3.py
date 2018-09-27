@@ -11,7 +11,6 @@ import random
 
 WORDLIST_FILENAME = "/Users/JakeCheeseman/Documents/Dropbox/MITx-6.00.1x/L6 - Dictionaries/words.txt"
 
-
 def loadWords():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
